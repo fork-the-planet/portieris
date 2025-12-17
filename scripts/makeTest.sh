@@ -4,6 +4,8 @@ GOTAGS=$2
 
 failures=0
 echo 'mode: atomic' > cover.out
+# Workaround for issue in Go 1.25 https://github.com/golang/go/issues/75031
+go env -w GOTOOLCHAIN="go$(grep ^go go.mod | awk '{print $2;}')+auto"
 for PACKAGE in $1; do
     go test --tags $GOTAGS -covermode=atomic -coverprofile=cover.tmp $PACKAGE && tail -n +2 cover.tmp >> cover.out
     packageResult=$?
