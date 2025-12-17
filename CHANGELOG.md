@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020-2025
-lastupdated: "2025-11-17"
+lastupdated: "2025-12-17"
 
 ---
 
@@ -12,6 +12,11 @@ Notable changes recorded here.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## v-next
+
+## v0.13.34
+Release: 2025-12-17
+
+* Update indirect dependency github.com/sigstore/fulcio for CVE-2025-66506
 
 ## v0.13.33
 Release: 2025-11-17
