@@ -2,6 +2,8 @@ module github.com/IBM/portieris
 
 go 1.25.0
 
+toolchain go1.25.5
+
 replace (
 	k8s.io/api => k8s.io/api v0.34.1
 	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.34.1
